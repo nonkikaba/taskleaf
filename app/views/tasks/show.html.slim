@@ -14,7 +14,7 @@ table.table.table-hover
       th= Task.human_attribute_name(:description)
       / hメソッドは「&」などのHTMLの特殊文字をエスケープして、「&amp;」などの無害な文字列に変換するメソッド
       / hメソッドの代わりにrawメソッドや<%== >を使用しても良い
-      td= simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div")
+      td= auto_link(simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div"))
     tr
       th= Task.human_attribute_name(:created_at)
       td= @task.created_at
