@@ -69,4 +69,4 @@ gem 'bootstrap'
 # rails consoleを開こうとするとLoadErrorになったので以下のgemを追加
 gem 'rb-readline'
 gem 'rails_autolink'
-
+gem 'ransack'
