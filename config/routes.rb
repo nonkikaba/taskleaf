@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :tasks do
     # /tasks/new/confirmというURLをconfirm_newアクションに対応づける
     # confirm_new_task POST /tasks/new/confirm tasks#confitm_new
+    # 参考: https://railsguides.jp/routing.html
     post :confirm, action: :confirm_new, on: :new
+    post :import, on: :collection
   end
 end
